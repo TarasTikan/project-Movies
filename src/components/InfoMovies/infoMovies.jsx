@@ -2,7 +2,6 @@ import { WrapInfo, GanresList } from './InfoMovies.styled';
 import PropTypes from 'prop-types';
 
 const InfoMovies = ({ photo, title, score, overview, genres, data }) => {
-
   return (
     <WrapInfo>
       <div>
