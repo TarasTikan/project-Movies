@@ -11,6 +11,7 @@ import InfoMovies from 'components/InfoMovies/infoMovies';
 import Navigation from 'components/Navigation/Navigation';
 import { WrapLink, BackBtn } from './MoviesDetails.styled';
 import { Head } from 'pages/Header/Header.styled';
+import { routes } from 'Router/paths';
 const MoviesDetails = () => {
   const navigate = useNavigate();
   const [details, setDetails] = useState([]);
@@ -44,7 +45,7 @@ const MoviesDetails = () => {
   }
 
   const handleBackBtn = () => {
-    navigate(location?.state?.from ?? '/');
+    navigate(location?.state?.from ?? routes.home);
   };
   return (
     <>
