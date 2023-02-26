@@ -1,6 +1,8 @@
 import { WrapInfo, GanresList } from './InfoMovies.styled';
+import PropTypes from 'prop-types';
 
 const InfoMovies = ({ photo, title, score, overview, genres, data }) => {
+
   return (
     <WrapInfo>
       <div>
@@ -41,3 +43,17 @@ const InfoMovies = ({ photo, title, score, overview, genres, data }) => {
 };
 
 export default InfoMovies;
+
+InfoMovies.propTypes = {
+  photo: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  score: PropTypes.number.isRequired,
+  overview: PropTypes.string.isRequired,
+  data: PropTypes.number.isRequired,
+  genres: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+    })
+  ),
+};

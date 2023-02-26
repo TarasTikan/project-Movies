@@ -44,7 +44,7 @@ const MoviesDetails = () => {
   }
 
   const handleBackBtn = () => {
-    navigate(location?.state?.from ?? '/goit-react-hw-05-movies');
+    navigate(location?.state?.from ?? '/');
   };
   return (
     <>

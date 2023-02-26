@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const TrendListMovies = ({ movies }) => {
+
   return (
     <>
       <h1>Trending today</h1>
@@ -15,4 +17,13 @@ const TrendListMovies = ({ movies }) => {
   );
 };
 
+TrendListMovies.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string
+    })
+  ),
+};
 export default TrendListMovies;
