@@ -7,7 +7,7 @@ import {
   useParams,
   useLocation,
 } from 'react-router-dom';
-import InfoMovies from 'components/InfoMovies/infoMovies';
+import InfoMovies from 'components/InfoMovies/InfoMovies';
 import Navigation from 'components/Navigation/Navigation';
 import { WrapLink, BackBtn } from './MoviesDetails.styled';
 import { Head } from 'pages/Header/Header.styled';
